@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Book Library</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>📚 Pagetalk</h1>
+    <input type="text" id="search" placeholder="Search books..." onkeyup="searchBook()">
+</header>
+
+<section class="categories">
+    <button onclick="filterBooks('all')">All</button>
+    <button onclick="filterBooks('romance')">Romance</button>
+    <button onclick="filterBooks('fantasy')">Fantasy</button>
+    <button onclick="filterBooks('fiction')">Fiction</button>
+</section>
+
+<h2>📖 Books</h2>
+<div id="bookContainer" class="grid"></div>
+
+<h2>💗 Currently Reading</h2>
+<div id="currentReading" class="grid"></div>
+<!-- Book Modal -->
+<div id="bookModal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()" class="close">&times;</span>
+
+    <h2 id="bookTitle"></h2>
+    <p id="bookDesc"></p>
+
+    <p><strong>Review:</strong> <span id="bookReview"></span></p>
+    <p><strong>Thoughts:</strong> <span id="bookThoughts"></span></p>
+    <p><strong>Quote:</strong> <span id="bookQuotes"></span></p>
+  </div>
+</div>
+<hr>
+
+<h3>Add Your Thoughts 💭</h3>
+<textarea id="newThoughtInput" placeholder="Write your thoughts..." rows="3"></textarea>
+<button onclick="postThought()">Post</button>
+<a href="contact.html" class="contact-link">Contact Us</a>
+
+<script src="script.js"></script>
+</body>
+</html>
